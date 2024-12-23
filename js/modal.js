@@ -6,8 +6,8 @@
   };
 
   // Відкривання модального вікна
-  refs.openModalBtn.forEach((element) => {
-    element.addEventListener('click', toggleModal);
+  refs.openModalBtn.forEach((button) => {
+    button.addEventListener('click', toggleModal);
   });
 
   // Закривання модального вікна через кнопку
