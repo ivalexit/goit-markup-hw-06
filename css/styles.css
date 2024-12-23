@@ -611,14 +611,134 @@ body {
 
 /*==== Team - mobile ====*/
 
+.team {
+  background: #f4f4fd;
+  padding: 96px 0;
+}
 
+.team .container {
+  width: 264px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
 
+.team-title {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11; /* 111.111% */
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
 
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
 
+.team-list-item {
+  background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+              0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.team-info {
+  padding: 32px 0;
+}
+
+.team-name {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2; /* 120% */
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.team-role {
+  color: #434455;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.team-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  list-style-type: none;
+}
+
+.team-link {
+  display: flex;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-icon {
+  fill: #f4f4fd;
+}
 
 
 
 /*==== Team - tablet ====*/
 
 
+@media screen and (min-width: 768px) {
+  .team .container {
+    width: 584px;
+    padding: 0 16px;
+  }
+
+  .team-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 64px;
+    column-gap: 24px;
+  }
+
+  .team-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
 /*==== Team - desktop ====*/
+
+
+@media screen and (min-width: 1158px) {
+  .team {
+    padding: 120px 0;
+    min-width: 1440px;
+  }
+
+  .team .container {
+    min-width: 1128px;
+    padding: 0;
+  }
+
+  .team-list-item {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+  }
+
+  .team-link:hover,
+  .team-link:focus {
+    background-color: #404bbf;
+  }
+}
