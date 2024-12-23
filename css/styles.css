@@ -296,7 +296,6 @@ body {
 }
 
 
-
   .contact-link {
     color: #434455;
     font-size: 12px;
@@ -500,8 +499,8 @@ body {
         url(../images/solutions_deskx2.jpg);
     }
   }
-  .solutions-btn:hover,
-  .solutions-btn:focus {
+  .solutions-button:hover,
+  .solutions-button:focus {
     background-color: #404bbf;
   }
 }
