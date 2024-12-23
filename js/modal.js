@@ -1,26 +1,37 @@
 (() => {
-    const refs = {
-      openDialogBtn: document.querySelector("[data-dialog-open]"),
-      closeDialogBtn: document.querySelector("[data-dialog-close]"),
-      dialog: document.querySelector("[data-dialog]"),
-    };
-  
-    refs.openDialogBtn.addEventListener("click", toggleDialog);
-    refs.closeDialogBtn.addEventListener("click", toggleDialog);
-  
-    refs.dialog.addEventListener("click", (event) => {
-      if (event.target === refs.dialog) {
-        toggleDialog();
-      }
-    });
-  
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && refs.dialog.classList.contains("is-visible")) {
-        toggleDialog();
-      }
-    });
-  
-    function toggleDialog() {
-      refs.dialog.classList.toggle("is-visible");
+  const refs = {
+    openModalBtn: document.querySelectorAll('[data-dialog-open]'),
+    closeModalBtn: document.querySelector('[data-dialog-close]'),
+    modal: document.querySelector('[data-dialog]'),
+  };
+
+  // Відкривання модального вікна
+  refs.openModalBtn.forEach((element) => {
+    element.addEventListener('click', toggleModal);
+  });
+
+  // Закривання модального вікна через кнопку
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  // Закривання по кліку на бекдроп
+  refs.modal.addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) {
+      refs.modal.classList.add('is-hidden');
+      document.body.classList.remove('no-scroll');
     }
-  })();
+  });
+
+  // Закривання по клавіші Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !refs.modal.classList.contains('is-hidden')) {
+      refs.modal.classList.add('is-hidden');
+      document.body.classList.remove('no-scroll');
+    }
+  });
+
+  // Тогл класів для відображення/приховування модального вікна
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden');
+    document.body.classList.toggle('no-scroll'); // Заборона прокрутки сторінки
+  }
+})();
