@@ -1157,3 +1157,212 @@ body {
     cursor: pointer;
   }
 }
+
+/*==================================================================================*/
+
+
+
+/*==== Modal Window ====*/
+
+/*  MODAL MOBILE STYLE */
+.dialog {
+  position: fixed;
+  z-index: 99999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dialog-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 288px;
+  border-radius: 4px;
+  background: #fcfcfc;
+  padding: 72px 24px 24px 24px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 16px 24px 16px;
+}
+.dialog-close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dialog-close-btn {
+  background-color: #e7e9fc;
+  border: rgba(0, 0, 0, 0.1) solid 1px;
+  border-radius: 50%;
+  line-height: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  fill: #2e2f42;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dialog-close-btn:hover,
+.dialog-close-btn:focus {
+  fill: #ffffff;
+  background-color: #404bbf;
+  border: none;
+}
+.dialog-message {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+/* FORM */
+.dialog-field {
+  margin-bottom: 8px;
+}
+.dialog-label {
+  display: block;
+  color: #8e8f99;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+.dialog-input-wrapper {
+  position: relative;
+}
+.dialog-input {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  padding-left: 38px;
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dialog-input:focus {
+  border-color: #4d5ae5;
+  outline-offset: 4px;
+  outline-color: transparent;
+}
+.dialog-input:focus + .dialog-icon {
+  fill: #4d5ae5;
+}
+.dialog-icon {
+  fill: #2e2f42;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dialog-textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  color: rgba(46, 47, 66, 0.4);
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  background-color: transparent;
+  outline: transparent;
+}
+.dialog-textarea::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+}
+.dialog-textarea:focus {
+  border-color: #4d5ae5;
+  outline-offset: 4px;
+  outline-color: transparent;
+}
+.dialog-checkbox-label {
+  color: #8e8f99;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.dialog-checkbox-mark {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.dialog-checkbox:checked + .dialog-checkbox-label > .dialog-checkbox-mark {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
+.dialog-privacy-link {
+  color: #4d5ae5;
+  text-decoration: underline;
+}
+.dialog-submit-btn {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4d5ae5;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* MODAL TABLET STYLE */
+@media screen and (min-width: 768px) {
+  .dialog-box {
+    width: 408px;
+    height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
+  .dialog-privacy-link {
+    padding: 0;
+  }
+}
