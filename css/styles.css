@@ -555,7 +555,7 @@ body {
     text-align: left;
   }
 
-  .advanteges-list {
+  .advantages-list {
     display: flex;
     flex-direction: row;
     column-gap: 24px;
@@ -563,7 +563,7 @@ body {
     flex-wrap: wrap;
   }
 
-  .advanteges-list-item {
+  .advantages-list-item {
     width: calc((100% - 24px) / 2);
   }
 
@@ -582,7 +582,7 @@ body {
     padding: 120px 0;
   }
 
-  .advanteges-list-item {
+  .advantages-list-item {
     width: calc((100% - 72px) / 4);
   }
 
