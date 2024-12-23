@@ -38,14 +38,6 @@ body {
 }
 
 
-.header {
-  border-bottom: 1px solid #e7e9fc;
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
 
 /*==== Header ====*/ 
 
@@ -99,7 +91,7 @@ body {
 }
 
 
-/*==== Menu ====*/
+/*==== Menu mobile====*/
 @media screen and (max-width: 767px) {
   .mobile-open-btn {
     border: none;
@@ -149,7 +141,7 @@ body {
     color: #404bbf;
   }
 
-  .mobile-header-navigation-list {
+  .mobile-header-navigation-list { /*!!!!!!!!!!!!!*/
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
@@ -157,7 +149,7 @@ body {
     margin-top: 72px;
   }
 
-  .mobile-navigation-link {
+  .mobile-navigation-link {  /*!!!!!!!!!!!!!*/
     color: #434455;
     font-size: 20px;
     font-weight: 500;
@@ -165,22 +157,22 @@ body {
     letter-spacing: 0.02em;
     font-style: normal;
   }
-  .mobile-navigation-link.active {
+  .mobile-navigation-link.active {   /*!!!!!!!!!!!!!*/
     color: #4d5ae5;
   }
 
-  .mobile-social-box {
+  .mobile-social-box {       /*!!!!!!!!!!!!!*/
     margin-top: auto;
   }
 
-  .mobile-contacts-list {
+  .mobile-contacts-list {     /*!!!!!!!!!!!!!*/
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
     margin-top: auto;
   }
-  .mobile-close-menu-bttn {
+  .mobile-close-menu-btn {
     border: #e7e9fc solid 1px;
     border-radius: 50%;
     line-height: 0;
@@ -196,7 +188,7 @@ body {
       border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .mobile-close-menu-bttn-icon {
+  .mobile-close-menu-btn-icon {
     fill: #2e2f42;
   }
 
@@ -239,7 +231,7 @@ body {
     display: none;
   }
 
-  .mobile-open-bttn {
+  .mobile-open-btn {
     display: none;
   }
 
@@ -263,6 +255,36 @@ body {
   display: flex;
   font-style: normal;
 }
+
+.navigation-list {
+  color: #2e2f42;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 24px 0;
+  display: block;
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation-list.active {
+  color: #404bbf;
+}
+
+.navigation-list.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 2px;
+  background: #404bbf;
+  color: #404bbf;
+  width: 48px;
+  height: 4px;
+  margin-top: 20px;
+  bottom: -1px;
+}
+
+
 .header-contacts-list {
   display: flex;
   flex-direction: column;
@@ -281,7 +303,7 @@ body {
     letter-spacing: 0.04em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-
+}
 
 
 
@@ -324,45 +346,279 @@ body {
 
 
 
+/*==== Solutions - Mobile ====*/
 
-
-
-
-
-
-
-
-
-  .navigation-link {
-    color: #2e2f42;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    padding: 24px 0;
-    display: block;
-    position: relative;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .navigation-link:active {
-    color: #404bbf;
-  }
-
-  .navigation-link.active::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 2px;
-    background: #404bbf;
-    color: #404bbf;
-    width: 48px;
-    height: 4px;
-    margin-top: 20px;
-    bottom: -1px;
-  }
-
-
-
-
+.solutions {
+  max-width: 320px;
+  margin: 0 auto;
+  height: 432px;
+  flex-shrink: 0;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/solutions_mob.jpg);
+  background-size: cover;
+  padding: 72px 0;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
+@media screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx),
+  screen and (min-device-pixel-ratio: 2) {
+  .solutions {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/solutions_mobx2.jpg);
+  }
+}
+
+.solutions-title {
+  color: #ffffff;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 288px;
+  margin-bottom: 72px;
+  padding-left: 59px;
+  padding-right: 60px;
+}
+
+.solutions-button {
+  display: block;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.04em;
+  background: #4d5ae5;
+  cursor: pointer;
+  margin: 0 auto;
+  min-width: 169px;
+  height: 56px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/*==== Solutions - Tablet ====*/
+
+
+
+@media screen and (min-width: 768px) {
+  .solutions {
+    min-width: 768px;
+    margin: 0 auto;
+    height: 436px;
+    flex-shrink: 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/solutions_tab.jpg);
+    background-size: cover;
+    padding: 112px 0;
+    background-repeat: no-repeat;
+    max-width: 768px;
+    background-position: center;
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (min-device-pixel-ratio: 2) {
+    .solutions {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/solutions_tabx2.jpg);
+    }
+  }
+
+  .solutions-title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 496px;
+    margin-bottom: 36px;
+    padding: 0;
+  }
+}
+
+
+/*==== Solutions - Desktop ====*/
+
+
+@media screen and (min-width: 1158px) {
+  .hero-title {
+    margin-bottom: 48px;
+  }
+
+  .hero {
+    min-width: 1158px;
+    margin: 0 auto;
+    height: 600px;
+    flex-shrink: 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/solutions_desk.jpg);
+    background-size: cover;
+    padding: 188px 0;
+    background-repeat: no-repeat;
+    max-width: 1440px;
+    background-position: center;
+  }
+
+  @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (min-device-pixel-ratio: 2) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/solutions_deskx2.jpg);
+    }
+  }
+  .hero-btn:hover,
+  .hero-btn:focus {
+    background-color: #404bbf;
+  }
+}
+
+
+
+/*==== Advantages - mobile ====*/
+
+
+
+.advantages {
+  padding: 96px 0;
+}
+
+.advantages-icon-container {
+  display: none;
+}
+
+.advanteges-list {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.advantages-title {
+  text-align: center;
+  color: #2e2f42;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.advantages-text {
+  align-self: stretch;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+
+/*==== Advantages - tablet ====*/
+
+
+@media screen and (min-width: 768px) {
+  .advantages-title {
+    text-align: left;
+  }
+
+  .advanteges-list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    row-gap: 72px;
+    flex-wrap: wrap;
+  }
+
+  .advanteges-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .advantages-text {
+    width: 356px;
+  }
+}
+
+
+
+/*==== Advantages - desktop ====*/
+
+
+@media screen and (min-width: 1158px) {
+  .advantages {
+    padding: 120px 0;
+  }
+
+  .advanteges-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+
+  .advantages-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    width: 264px;
+    height: 112px;
+    flex-shrink: 0;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+  }
+
+  .advantages-text {
+    width: 264px;
+    font-weight: 400;
+  }
+
+  .advantages-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+}
+
+
+
+
+/*==== Team - mobile ====*/
+
+
+
+
+
+
+
+
+/*==== Team - tablet ====*/
+
+
+/*==== Team - desktop ====*/
