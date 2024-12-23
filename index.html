@@ -12,45 +12,48 @@
 </head>
 
 <body>
-    <!-- header -->
-    <header class="header">
-        <div class="container">
-            <nav class="navigation">
-                <a class="header-logo" href="./index.html">Web<span class="header-logo-studio">Studio</span></a>
-                <ul class="navigation-list">
-                    <li><a class="navigation-link active" href="./index.html">Studio</a></li>
-                    <li><a class="navigation-link" href="">Portfolio</a></li>
-                    <li><a class="navigation-link" href="">Contacts</a></li>
-                </ul>
-            </nav>
-
-    <!-- contacts -->
-            <address class="header-contacts">
-                <ul class="header-contacts-list">
-                    <li>
-                        <a class="contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-                    </li>
-                    <li>
-                        <a class="contact-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
-                    </li>
-                </ul>
-            </address>
-
-        </div>
-    </header>
-
-
+<!-- header -->
+<header class="header">
+    <div class="container header-container">
+        <!-- Навігація -->
+        <nav class="navigation">
+            <a class="header-logo" href="./index.html">Web<span class="header-logo-studio">Studio</span></a>
+            <ul class="navigation-list">
+                <li><a class="navigation-link active" href="./index.html">Studio</a></li>
+                <li><a class="navigation-link" href="">Portfolio</a></li>
+                <li><a class="navigation-link" href="">Contacts</a></li>
+            </ul>
+        </nav>
+        <!-- Кнопка мобільного меню -->
+        <button class="mobile-open-btn" type="button">
+            <svg class="mobile-open-btn-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-heroicons-solid_menu"></use>
+            </svg>
+        </button>
+        <!-- Контакти -->
+        <address class="header-contacts">
+            <ul class="header-contacts-list">
+                <li>
+                    <a class="contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+                <li>
+                    <a class="contact-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                </li>
+            </ul>
+        </address>
+    </div>
+</header>
 
     <main>
-    <!-- Solutions -->
-    
+        <!-- Solutions -->
         <section class="solutions">
             <div class="container">
                 <h1 class="solutions-title">Effective Solutions for Your Business</h1>
                 <button class="solutions-button" type="button" data-dialog-open>Order Service</button>
             </div>
         </section>
-    
+    </main>
+</body>
 
         <!-- Advanteges -->
         <section class="advantages">
@@ -60,7 +63,7 @@
                 <li class="advanteges-list-item">
                     <div class="advantages-icon-container">
                         <svg class="advantages-icon" width="64" height="64" aria-label="antenna icon">
-                            <use href="./images/icons.svg#icon-antena"></use>
+                            <use href="./images/icons.svg#icon-antenna-1"></use>
                         </svg>
                     </div>
 
@@ -73,7 +76,7 @@
                 <li class="advanteges-list-item">
                     <div class="advantages-icon-container">
                         <svg class="advantages-icon" width="64" height="64" aria-label="clock icon">
-                            <use href="./images/icons.svg#icon-clock"></use>
+                            <use href="./images/icons.svg#icon-clock-1"></use>
                         </svg>
                     </div>
 
@@ -84,12 +87,14 @@
                         within the shortest possible time.
                     </p>
                 </li>
+
                 <li class="advanteges-list-item">
                     <div class="advantages-icon-container">
                         <svg class="advantages-icon" width="64" height="64" aria-label="diagram icon">
-                            <use href="./images/icons.svg#icon-diagram"></use>
+                            <use href="./images/icons.svg#icon-diagram-1"></use>
                         </svg>
                     </div>
+
                     <h3 class="advantages-title" >Diligence</h3>
                     <p class="advantages-text">
                         Research and confirm brands that present the strongest digital 
@@ -100,9 +105,10 @@
                 <li class="advanteges-list-item">
                     <div class="advantages-icon-container">
                         <svg class="advantages-icon" width="64" height="64" aria-label="astronaut icon">
-                            <use href="./images/icons.svg#icon-astronaut"></use>
+                            <use href="./images/icons.svg#icon-astronaut-1"></use>
                         </svg>
                     </div>
+
                     <h3 class="advantages-title" >Technologies</h3>
                     <p class="advantages-text">
                         Design practice focused on digital experiences. 
