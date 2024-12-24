@@ -795,12 +795,12 @@ body {
 
   .team-image:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 
 
   .team-icon {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
   }
   .team-icon:hover {
     transform: scale(1.3);
