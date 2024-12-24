@@ -250,10 +250,16 @@ body {
     padding: 0;
   }
 
-   .navigation {
+  .navigation {
     display: flex;
     align-items: center;
-   }
+  }
+
+
+  .navigation-list {
+    display: flex;
+    gap: 40px;
+  }
 
 
  .header-contacts {
