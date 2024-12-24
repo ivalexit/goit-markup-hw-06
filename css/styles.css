@@ -327,6 +327,11 @@ body {
     align-items: center;
   }
 
+  .navigation-list {
+    display: flex;
+    gap: 40px;
+  }
+
 
   .header-contacts-list {
     gap: 40px;
