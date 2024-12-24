@@ -260,7 +260,7 @@ body {
   font-style: normal;
 }
 
-.navigation-list {
+.navigation-link {
   color: #2e2f42;
   font-size: 16px;
   font-weight: 500;
@@ -271,11 +271,11 @@ body {
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.navigation-list.active {
+.navigation-link.active {
   color: #404bbf;
 }
 
-.navigation-list.active::after {
+.navigation-link.active::after {
   content: "";
   display: block;
   position: absolute;
@@ -286,6 +286,11 @@ body {
   height: 4px;
   margin-top: 20px;
   bottom: -1px;
+}
+
+.navigation-link:hover,
+.navigation-link:focus {
+  color: #404bbf;
 }
 
 
@@ -331,7 +336,39 @@ body {
     gap: 40px;
   }
 
+  .navigation-link {
+    color: #2e2f42;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding: 24px 0;
+    display: flex;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .navigation-link.active {
+    color: #404bbf;
+  }
+  
+  .navigation-link.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 2px;
+    background: #404bbf;
+    color: #404bbf;
+    width: 48px;
+    height: 4px;
+    margin-top: 20px;
+    bottom: -1px;
+  }
 
+  .navigation-link:hover,
+  .navigation-link:focus {
+    color: #404bbf;
+  }
+  
   .header-contacts-list {
     gap: 40px;
     flex-direction: row;
@@ -352,10 +389,7 @@ body {
     color: #404bbf;
   }
 
-  .navigation-link:hover,
-  .navigation-link:focus {
-    color: #404bbf;
-  }
+ 
 }
 
 /*==============================================================================*/
