@@ -381,12 +381,15 @@ body {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.3s ease;
   }
-
+  
   .contact-link:hover,
   .contact-link:focus {
     color: #404bbf;
+    transform: scale(1.1);
   }
 
  
@@ -794,6 +797,15 @@ body {
   }
 
 
+  .team-icon {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .team-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+   /*===================*/
 
   .team-list-item {
     flex-basis: calc((100% - 3 * 24px) / 4);
