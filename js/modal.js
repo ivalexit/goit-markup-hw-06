@@ -10,6 +10,16 @@
     button.addEventListener('click', toggleModal);
   });
 
+
+  // Знайти кнопку і меню
+  const openMenuButton = document.querySelector('.dialog-open-btn');
+  const mobileMenu = document.querySelector('.dialog-menu');
+
+// Додати слухач подій на кнопку
+  openMenuButton.addEventListener('click', () => {
+  mobileMenu.classList.toggle('is-open');
+});
+
   // Закривання модального вікна через кнопку
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
